@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Data</title>
+</head>
+<body>
+    <h1>Get Information by Name</h1>
+    <form action="/data" method="post">
+        <label for="name">Enter Name:</label>
+        <input type="text" name="name">
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+    <% if(locals.array){ %>
+        <% for(var i = 0; i < array.length;i++){ %>
+            Student Name : <%= array[i].Name%>  <br>
+            University RollNo : <%= array[i].RollNo%>  <br>
+            Branch : <%= array[i].Branch%>  <br>
+            Email : <%= array[i].Email%>  <br>
+            Contact : <%= array[i].Contact%>  <br>
+            <hr>
+      <%    } %>
+    <% } %> 
+</body>
+</html>
